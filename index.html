@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sailor Solar System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="start-screen">
+  <h1 id="start-title">✨ SOLAR SYSTEM ✨</h1>
+  <p id="start-sub" style="display:none;"></p>
+  <div id="planet-row">🪐 ✨ 🌍 ✨ 🚀</div>
+  <div id="luna-line">
+    <div id="luna-face"></div>
+    <div id="luna-bubble"><span id="luna-bubble-text">…</span></div>
+  </div>
+  <button class="big-btn" id="play-btn">PLAY</button>
+  <div id="luna-sprite"></div>
+</div>
+
+<div id="canvas-container"></div>
+
+<div id="topbar">
+  <button id="discovery-badge">✨ 0/10 &nbsp;⚙</button>
+</div>
+
+<button id="magic-wand" title="Magic!">🪄</button>
+
+<div id="flash-overlay"></div>
+
+<div id="birthday-overlay">
+  <div id="birthday-heart">💗</div>
+  <div id="birthday-title">🎉 AMAZING JOB! 🎉</div>
+  <div id="birthday-sub">You explored the whole solar system! ✨</div>
+  <button class="big-btn" id="birthday-close">✨</button>
+</div>
+
+
+<div id="settings">
+  <h3 id="settings-title">PARENT SETTINGS</h3>
+  <div id="hint-line">drag to look around · pinch or scroll to zoom</div>
+  <div class="row"><span>🌐 Language</span><div style="display:flex;gap:6px;">
+    <button class="lang-btn" id="lang-en">EN</button><button class="lang-btn" id="lang-fr">FR</button>
+  </div></div>
+  <div class="row"><span id="label-voice">🔊 Voice</span><div class="switch" id="sw-voice"></div></div>
+  <div class="row"><span id="label-music">🎵 Music</span><div class="switch on" id="sw-music"></div></div>
+  <div class="row" style="flex-direction:column;align-items:stretch;">
+    <span id="label-volume" style="margin-bottom:6px;">🔉 Volume</span>
+    <input type="range" id="volume" min="0" max="1" step="0.05" value="0.4">
+  </div>
+  <div class="row"><span id="label-magic">🌙 Magic mode</span><div class="switch" id="sw-magic"></div></div>
+  <div class="row"><span id="label-axis">📐 Show axis</span><div class="switch" id="sw-axis"></div></div>
+  <div class="row" style="flex-direction:column;align-items:stretch;">
+    <span id="label-speed" style="margin-bottom:6px;">⏩ Orbit speed</span>
+    <input type="range" id="speed" min="0" max="4" step="0.1" value="1">
+  </div>
+  <button class="reset" id="reset-view">Reset view</button>
+
+  <h3 id="narrator-title">NARRATOR VOICE</h3>
+  <div id="voice-list"><div style="opacity:.5;font-size:12px;">Loading voices…</div></div>
+</div>
+
+<div id="info-card">
+  <button class="close" id="info-close">✕</button>
+  <div id="card-flex">
+    <div id="portrait-panel">
+      <img id="portrait-img" style="display:none;">
+      <div id="portrait-emoji">🌙</div>
+    </div>
+    <div id="card-text">
+      <h2 id="info-name">Earth</h2>
+      <div id="info-sub">3rd planet from the Sun</div>
+      <ul id="info-facts"></ul>
+      <div id="guardian-caption">💗 <span id="guardian-name">Luna Bloom</span></div>
+    </div>
+  </div>
+</div>
+
+<script src="lib/three.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
