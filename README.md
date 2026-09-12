@@ -4,6 +4,8 @@ A toddler-friendly, tap-to-explore 3D solar system built with three.js —
 originally built as a birthday gift for a specific 3-year-old, generalized
 here into a simple toy any kid can play with.
 
+![screenshot](screenshotsystem.png)
+
 ## What it is
 
 - An interactive three.js solar system: Sun, all 8 planets, and the Moon,
