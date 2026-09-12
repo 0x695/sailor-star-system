@@ -1,8 +1,6 @@
 # 🌌 Sailor Solar System
 
 A toddler-friendly, tap-to-explore 3D solar system built with three.js —
-originally built as a birthday gift for a specific 3-year-old, generalized
-here into a simple toy any kid can play with.
 
 ![screenshot](screenshotsystem.png)
 
